@@ -24,15 +24,15 @@ mentioned in the list above.
 Test everything
 ----------------
 * [ ] `make test`
-* [ ] `./ranger.py [--clean]`
-* [ ] `ranger/ext/rifle.py`
+* [ ] `./patrol.py [--clean]`
+* [ ] `patrol/ext/rifle.py`
 * [ ] `make install`
 
 Make a release commit
 ---------------------
 * [ ] Update the number in the `README`
-* [ ] Update `__version__` and `__release__` in `ranger/__init__.py`
-* [ ] Update `__version__` in `ranger/ext/rifle.py`
+* [ ] Update `__version__` and `__release__` in `patrol/__init__.py`
+* [ ] Update `__version__` in `patrol/ext/rifle.py`
 * [ ] `make man`
 * [ ] Write changelog entry
 * [ ] Think of a witty commit message
@@ -50,13 +50,13 @@ Make snapshot and test again
 
 Update the website
 ------------------
-* [ ] Add the new version as `ranger-stable.tar.gz`
-* [ ] Add the new version as `ranger-X.Y.Z.tar.gz`
+* [ ] Add the new version as `patrol-stable.tar.gz`
+* [ ] Add the new version as `patrol-X.Y.Z.tar.gz`
 * [ ] Update both signatures `gpg --local-user 0x00FB5CDF --sign --detach-sign <file>`
 * [ ] Update the man page
-    * [ ] run `make manhtml` in ranger's repository
-    * [ ] copy the generated `doc/ranger.1.html` to the `ranger.github.io` repository
-* [ ] Rebuild the website, see `README.md` in https://github.com/ranger/ranger.github.io
+    * [ ] run `make manhtml` in patrol's repository
+    * [ ] copy the generated `doc/patrol.1.html` to the `patrol-org.github.io` repository
+* [ ] Rebuild the website, see `README.md` in https://github.com/patrol-org/patrol.github.io
 * [ ] Commit & push the website
 
 Make a PyPI release
@@ -73,4 +73,4 @@ Announce the update
 
 Change back to before
 ---------------------
-* [ ] Change `__release__` in `ranger/__init__.py` back to `False`
+* [ ] Change `__release__` in `patrol/__init__.py` back to `False`

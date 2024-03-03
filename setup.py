@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# This file is part of ranger, the console file manager.
+# This file is part of patrol, fork of ranger.
 # License: GNU GPL version 3, see the file "AUTHORS" for details.
 
 from __future__ import (absolute_import, division, print_function)
@@ -11,11 +11,11 @@ import shutil
 from setuptools import setup
 from setuptools.command.install_lib import install_lib
 
-import ranger
+import patrol
 
 
 SCRIPTS_PATH = 'build_scripts'
-EXECUTABLES_PATHS = ['/ranger/data/scope.sh']
+EXECUTABLES_PATHS = ['/patrol/data/scope.sh']
 
 
 def findall(directory):
@@ -57,15 +57,15 @@ class InstallLib(install_lib):
 
 def main():
     setup(
-        name='ranger-fm',
-        description='Vim-like file manager',
-        long_description=ranger.__doc__,
-        version=ranger.__version__,
-        author=ranger.__author__,
-        author_email=ranger.__email__,
-        license=ranger.__license__,
-        url='https://ranger.github.io',
-        keywords='file-manager vim console file-launcher file-preview',
+        name='patrol-cli',
+        description='Vim-like data explorer',
+        long_description=patrol.__doc__,
+        version=patrol.__version__,
+        author=patrol.__author__,
+        author_email=patrol.__email__,
+        license=patrol.__license__,
+        url='https://patrol-org.github.io',
+        keywords='vim console tree data',
         classifiers=[
             'Environment :: Console',
             'Environment :: Console :: Curses',
@@ -91,46 +91,46 @@ def main():
         cmdclass={'install_lib': InstallLib},
 
         scripts=scripts_hack(
-            ('ranger.py', 'ranger'),
-            ('ranger/ext/rifle.py', 'rifle'),
+            ('patrol.py', 'patrol'),
+            ('patrol/ext/rifle.py', 'rifle'),
         ),
         data_files=[
             ('share/applications', [
-                'doc/ranger.desktop',
+                'doc/patrol.desktop',
             ]),
             ('share/man/man1', [
-                'doc/ranger.1',
+                'doc/patrol.1',
                 'doc/rifle.1',
             ]),
-            ('share/doc/ranger', [
+            ('share/doc/patrol', [
                 'doc/colorschemes.md',
                 'CHANGELOG.md',
                 'HACKING.md',
                 'README.md',
             ]),
-            ('share/doc/ranger/config', findall('doc/config')),
-            ('share/doc/ranger/config/colorschemes', findall('doc/config/colorschemes')),
-            ('share/doc/ranger/examples', findall('examples')),
-            ('share/doc/ranger/tools', findall('doc/tools')),
+            ('share/doc/patrol/config', findall('doc/config')),
+            ('share/doc/patrol/config/colorschemes', findall('doc/config/colorschemes')),
+            ('share/doc/patrol/examples', findall('examples')),
+            ('share/doc/patrol/tools', findall('doc/tools')),
         ],
         package_data={
-            'ranger': [
+            'patrol': [
                 'data/*',
                 'config/rc.conf',
                 'config/rifle.conf',
             ],
         },
         packages=(
-            'ranger',
-            'ranger.api',
-            'ranger.colorschemes',
-            'ranger.config',
-            'ranger.container',
-            'ranger.core',
-            'ranger.ext',
-            'ranger.ext.vcs',
-            'ranger.gui',
-            'ranger.gui.widgets',
+            'patrol',
+            'patrol.api',
+            'patrol.colorschemes',
+            'patrol.config',
+            'patrol.container',
+            'patrol.core',
+            'patrol.ext',
+            'patrol.ext.vcs',
+            'patrol.gui',
+            'patrol.gui.widgets',
         ),
     )
 

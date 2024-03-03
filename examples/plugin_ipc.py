@@ -15,7 +15,7 @@ import ranger.api
 HOOK_INIT_OLD = ranger.api.hook_init
 
 
-def hook_init(fm):
+def hook_init(cli):
     try:
         # Create a FIFO.
         import os
@@ -35,7 +35,7 @@ def hook_init(fm):
                 # pylint: disable=unspecified-encoding
                 with open(filepath, 'r') as fifo:
                     line = fifo.read()
-                    fm.execute_console(line.strip())
+                    cli.execute_console(line.strip())
         thread.start_new_thread(ipc_reader, (ipc_fifo,))
 
         # Remove the FIFO on ranger exit.
@@ -50,7 +50,7 @@ def hook_init(fm):
         # IPC support disabled
         pass
     finally:
-        HOOK_INIT_OLD(fm)
+        HOOK_INIT_OLD(cli)
 
 
 ranger.api.hook_init = hook_init

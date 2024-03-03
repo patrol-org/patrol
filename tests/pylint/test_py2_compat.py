@@ -134,7 +134,7 @@ class TestPy2CompatibilityChecker(pylint.testutils.CheckerTestCase):
         with Popen(): #@
             pass
 
-        from ranger.ext.popen23 import Popen23
+        from patrol.ext.popen23 import Popen23
         with Popen23(): #@
             pass
         """)

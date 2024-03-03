@@ -16,7 +16,7 @@ B<rifle> [B<--help>] [B<-f> I<FLAGS>] [B<-l>] [B<-p> I<KEYWORD>]
 =head1 DESCRIPTION
 
 rifle is a powerful file executor that allows for complex file type checking,
-written to meet the needs of the file manager I<ranger>.  rifle's strength lies
+written to meet the needs of the data explorer I<ranger>.  rifle's strength lies
 in automatically determining file types, depending on which programs are
 installed on the system, even without any user interaction.
 

@@ -22,12 +22,12 @@ class avfs(Command):  # pylint: disable=invalid-name
         if os.path.isdir(self.avfs_root):
             archive_directory = "".join([
                 self.avfs_root,
-                self.fm.thisfile.path,
+                self.cli.thisfile.path,
                 self.avfs_suffix,
             ])
             if os.path.isdir(archive_directory):
-                self.fm.cd(archive_directory)
+                self.cli.cd(archive_directory)
             else:
-                self.fm.notify("This file cannot be handled by avfs.", bad=True)
+                self.cli.notify("This file cannot be handled by avfs.", bad=True)
         else:
-            self.fm.notify("Install `avfs' and run `mountavfs' first.", bad=True)
+            self.cli.notify("Install `avfs' and run `mountavfs' first.", bad=True)

@@ -1,7 +1,7 @@
-# This file is part of ranger, the console file manager.
+# This file is part of patrol, fork of range.
 # License: GNU GPL version 3, see the file "AUTHORS" for details.
 
-NAME = ranger
+NAME = patrol
 VERSION = $(shell grep -m 1 -o '[0-9][0-9.]\+\S*' README.md)
 NAME_RIFLE = rifle
 VERSION_RIFLE = $(VERSION)
@@ -41,7 +41,7 @@ options: help
 	@echo 'DESTDIR = $(DESTDIR)'
 
 help:
-	@echo 'make:                 Test and compile ranger.'
+	@echo 'make:                 Test and compile patrol.'
 	@echo 'make install:         Install $(NAME)'
 	@echo 'make pypi_sdist:      Release a new sdist to PyPI'
 	@echo 'make clean:           Remove the compiled files (*.pyc, *.pyo)'
@@ -66,11 +66,11 @@ install:
 		--optimize=$(PYOPTIMIZE)
 
 compile: clean
-	PYTHONOPTIMIZE=$(PYOPTIMIZE) $(PYTHON) -m compileall -q ranger
+	PYTHONOPTIMIZE=$(PYOPTIMIZE) $(PYTHON) -m compileall -q patrol
 
 clean:
-	find ranger -regex .\*\.py[co]\$$ -delete
-	find ranger -depth -name __pycache__ -type d -exec rm -r -- {} \;
+	find patrol -regex .\*\.py[co]\$$ -delete
+	find patrol -depth -name __pycache__ -type d -exec rm -r -- {} \;
 
 doc: cleandoc
 	mkdir -p $(DOCDIR)
@@ -81,17 +81,17 @@ doc: cleandoc
 	find . -name \*.html -exec sed -i 's|'"$(CWD)"'|../..|g' -- {} \;
 
 TEST_PATHS_MAIN = \
-	$(shell find ./ranger -mindepth 1 -maxdepth 1 -type d \
+	$(shell find ./patrol -mindepth 1 -maxdepth 1 -type d \
 		! -name '__pycache__' \
-		! -path './ranger/config' \
-		! -path './ranger/data' \
+		! -path './patrol/config' \
+		! -path './patrol/data' \
 	) \
-	./ranger/__init__.py \
+	./patrol/__init__.py \
 	$(shell find ./doc/tools ./examples -type f -name '*.py') \
-	./ranger.py \
+	./patrol.py \
 	./setup.py \
 	./tests
-TEST_PATH_CONFIG = ./ranger/config
+TEST_PATH_CONFIG = ./patrol/config
 
 test_pylint:
 	@echo "$(bold)Running pylint...$(normal)"
@@ -106,9 +106,9 @@ test_flake8:
 test_doctest:
 	@echo "$(bold)Running doctests...$(normal)"
 	@set -e; \
-	for FILE in $(shell grep -IHm 1 doctest -r ranger | grep $(FILTER) | cut -d: -f1); do \
+	for FILE in $(shell grep -IHm 1 doctest -r patrol | grep $(FILTER) | cut -d: -f1); do \
 		echo "Testing $$FILE..."; \
-		RANGER_DOCTEST=1 PYTHONPATH=".:"$$PYTHONPATH ${PYTHON} $$FILE; \
+		PATROL_DOCTEST=1 PYTHONPATH=".:"$$PYTHONPATH ${PYTHON} $$FILE; \
 	done
 	@echo
 
@@ -123,7 +123,7 @@ test_py: test_pylint test_flake8 test_doctest test_pytest test_other
 
 test_shellcheck:
 	@echo "$(bold)Running shellcheck...$(normal)"
-	sed '2,$$s/^\([[:blank:]]*\)#/\1/' ./ranger/data/scope.sh \
+	sed '2,$$s/^\([[:blank:]]*\)#/\1/' ./patrol/data/scope.sh \
 	| shellcheck -a -
 	@echo
 
@@ -135,11 +135,11 @@ test_other:
 test: test_py test_shellcheck
 	@echo "$(bold)Finished testing: All tests passed!$(normal)"
 
-doc/ranger.1: doc/ranger.pod
-	pod2man --stderr --center='ranger manual' \
+doc/patrol.1: doc/patrol.pod
+	pod2man --stderr --center='patrol manual' \
 		--date='$(NAME)-$(VERSION)' \
 		--release=$(shell date -u '+%Y-%m-%d') \
-		doc/ranger.pod doc/ranger.1
+		doc/patrol.pod doc/patrol.1
 
 doc/rifle.1: doc/rifle.pod
 	pod2man --stderr --center='rifle manual' \
@@ -147,10 +147,10 @@ doc/rifle.1: doc/rifle.pod
 		--release=$(shell date -u '+%Y-%m-%d') \
 		doc/rifle.pod doc/rifle.1
 
-man: doc/ranger.1 doc/rifle.1
+man: doc/patrol.1 doc/rifle.1
 
 manhtml:
-	pod2html doc/ranger.pod --outfile=doc/ranger.1.html
+	pod2html doc/patrol.pod --outfile=doc/patrol.1.html
 
 cleandoc:
 	test -d $(DOCDIR) && rm -- $(DOCDIR)/*.html || true
@@ -161,7 +161,7 @@ snapshot:
 dist: snapshot
 
 todo:
-	@grep --color -Ion '\(TODO\|XXX\).*' -r ranger
+	@grep --color -Ion '\(TODO\|XXX\).*' -r patrol
 
 .PHONY: clean cleandoc compile default dist doc help install man manhtml \
 	options snapshot test test_pylint test_flake8 test_doctest test_pytest \

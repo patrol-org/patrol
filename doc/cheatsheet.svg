@@ -247,7 +247,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:80.00000119%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
            y="777.36218"
            x="225"
-           sodipodi:role="line">ranger</tspan></text>
+           sodipodi:role="line">patrol</tspan></text>
     </g>
     <g
        id="g4351-0"
@@ -3864,10 +3864,10 @@
          y="272.55746"
          x="3.3203125"
          id="tspan4249-3-2-4-7-6-3"
-         sodipodi:role="line">ranger cheatsheet</tspan></text>
+         sodipodi:role="line">patrol cheatsheet</tspan></text>
     <a
        id="a5535"
-       xlink:href="https://ranger.github.io"
+       xlink:href="https://patrol-org.github.io"
        style="fill:#0000ff"
        transform="translate(10,-296.00002)">
       <text
@@ -3880,7 +3880,7 @@
            sodipodi:role="line"
            x="230"
            y="567.36218"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0000ff">https://ranger.github.io</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0000ff">https://patrol-org.github.io</tspan></text>
     </a>
     <text
        xml:space="preserve"
@@ -3895,7 +3895,7 @@
          style="font-size:15px;line-height:1.25;font-family:sans-serif">git clone</tspan></text>
     <a
        id="a5531"
-       xlink:href="https://github.com/ranger/ranger"
+       xlink:href="https://github.com/patrol-org/patrol"
        style="fill:#0000ff"
        transform="translate(243.52783,-306.06512)">
       <text
@@ -3908,7 +3908,7 @@
            x="280"
            id="tspan5529"
            sodipodi:role="line"
-           style="font-size:15px;line-height:1.25;font-family:sans-serif">https://github.com/ranger/ranger</tspan></text>
+           style="font-size:15px;line-height:1.25;font-family:sans-serif">https://github.com/patrol-org/patrol</tspan></text>
     </a>
     <rect
        style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3982,7 +3982,7 @@
          x="9.3103037"
          y="766.23425"
          id="tspan5591"
-         style="font-size:12.5px;line-height:1.25;font-family:sans-serif">%rangerdir</tspan><tspan
+         style="font-size:12.5px;line-height:1.25;font-family:sans-serif">%patroldir</tspan><tspan
          sodipodi:role="line"
          x="9.3103037"
          y="781.85925"
@@ -4035,7 +4035,7 @@
          x="85.646973"
          y="766.23425"
          id="tspan5593"
-         style="font-size:12.5px;line-height:1.25;font-family:sans-serif">The path to the ranger python module</tspan><tspan
+         style="font-size:12.5px;line-height:1.25;font-family:sans-serif">The path to the patrol python module</tspan><tspan
          sodipodi:role="line"
          x="85.646973"
          y="781.85925"
@@ -4204,7 +4204,7 @@
          x="433.52783"
          y="880.79724"
          style="font-style:italic;font-size:15px;line-height:1.25;font-family:sans-serif"
-         id="tspan6483">/usr/share/doc/ranger/examples/plugin_linemode.py</tspan><tspan
+         id="tspan6483">/usr/share/doc/patrol/examples/plugin_linemode.py</tspan><tspan
          sodipodi:role="line"
          x="433.52783"
          y="899.54724"
@@ -4241,14 +4241,14 @@
          style="font-weight:bold;font-size:15px;line-height:1.25;font-family:sans-serif"
          id="tspan5756">Config files<tspan
    style="font-weight:normal;font-family:sans-serif"
-   id="tspan5764">: run &quot;</tspan>ranger --copy-config=all<tspan
+   id="tspan5764">: run &quot;</tspan>patrol --copy-config=all<tspan
    style="font-weight:normal;font-family:sans-serif"
    id="tspan5762">&quot; to</tspan></tspan><tspan
          sodipodi:role="line"
          x="9.5532236"
          y="881.50867"
          style="font-weight:normal;font-size:15px;line-height:1.25;font-family:sans-serif"
-         id="tspan5772">copy the default config files to ~/.config/ranger/.</tspan></text>
+         id="tspan5772">copy the default config files to ~/.config/patrol/.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4261,7 +4261,7 @@
          y="905.85925"
          style="font-size:12.5px;line-height:1.25;font-family:sans-serif"><tspan
    style="font-weight:bold;font-family:sans-serif"
-   id="tspan5782">rc.conf</tspan>: A list of commands that are executed when ranger</tspan><tspan
+   id="tspan5782">rc.conf</tspan>: A list of commands that are executed when patrol</tspan><tspan
          sodipodi:role="line"
          x="9.3225098"
          y="921.48425"
@@ -4271,7 +4271,7 @@
          x="9.3225098"
          y="937.10925"
          style="font-size:12.5px;line-height:1.25;font-family:sans-serif"
-         id="tspan5816">Pro tip: Adding &quot;export RANGER_LOAD_DEFAULT_RC=FALSE&quot; to</tspan><tspan
+         id="tspan5816">Pro tip: Adding &quot;export PATROL_LOAD_DEFAULT_RC=FALSE&quot; to</tspan><tspan
          sodipodi:role="line"
          x="9.3225098"
          y="952.73425"
@@ -4300,7 +4300,7 @@
          x="9.3225098"
          y="1015.2343"
          style="font-size:12.5px;line-height:1.25;font-family:sans-serif"
-         id="tspan5844">When ranger opens a file, it tests those conditions. The first</tspan><tspan
+         id="tspan5844">When patrol opens a file, it tests those conditions. The first</tspan><tspan
          sodipodi:role="line"
          x="9.3225098"
          y="1030.8593"
@@ -4326,7 +4326,7 @@
          style="font-size:12.5px;line-height:1.25;font-family:sans-serif"
          id="tspan5864">in<tspan
    style="font-weight:bold;font-family:sans-serif"
-   id="tspan5866"> colorschemes/</tspan>. See /usr/share/doc/ranger/examples.</tspan></text>
+   id="tspan5866"> colorschemes/</tspan>. See /usr/share/doc/patrol/examples.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4339,7 +4339,7 @@
          y="271.36215"
          style="font-size:15px;line-height:1.25;font-family:sans-serif"><tspan
    style="font-weight:bold;font-family:sans-serif"
-   id="tspan5683">#ranger</tspan> on irc.libera.chat</tspan></text>
+   id="tspan5683">#patrol</tspan> on irc.libera.chat</tspan></text>
     <rect
        style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:1.0020833;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5634-3"
@@ -4361,12 +4361,12 @@
          style="font-weight:normal;font-size:12.5px;line-height:1.25;font-family:sans-serif"
          id="tspan4932"><tspan
    id="tspan4923"
-   style="font-weight:bold;font-size:12.5px;font-family:sans-serif">Commands</tspan> can be typed in by pressing : or added to ~/.config/ranger/rc.conf to apply then whenever</tspan><tspan
+   style="font-weight:bold;font-size:12.5px;font-family:sans-serif">Commands</tspan> can be typed in by pressing : or added to ~/.config/patrol/rc.conf to apply then whenever</tspan><tspan
          sodipodi:role="line"
          x="434.37744"
          y="944.48425"
          style="font-weight:normal;font-size:12.5px;line-height:1.25;font-family:sans-serif"
-         id="tspan4931">ranger starts. All commands are listed in the man page. Some important ones:</tspan></text>
+         id="tspan4931">patrol starts. All commands are listed in the man page. Some important ones:</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

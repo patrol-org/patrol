@@ -7,7 +7,7 @@ import re
 import sys
 
 
-# Add relevant ranger module to PATH... there surely is a better way to do this...
+# Add relevant patrol module to PATH... there surely is a better way to do this...
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 
@@ -21,7 +21,7 @@ def report(boolean, errormessage):
 
 def get_path_of_man_page():
     dirpath_of_this_file = os.path.dirname(__file__)
-    return os.path.join(dirpath_of_this_file, '..', 'doc', 'ranger.pod')
+    return os.path.join(dirpath_of_this_file, '..', 'doc', 'patrol.pod')
 
 
 def read_manpage():
@@ -45,7 +45,7 @@ def get_sections():
 
 
 def find_undocumented_settings():
-    from ranger.container.settings import ALLOWED_SETTINGS
+    from patrol.container.settings import ALLOWED_SETTINGS
     sections = get_sections()
     setting_section = sections['SETTINGS']
     matcher_pattern = r'^=item [\w\d_, ]*{setting}'

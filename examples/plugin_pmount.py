@@ -21,22 +21,22 @@ LIST_MOUNTS_KEY = '<alt>N'
 HOOK_INIT_OLD = ranger.api.hook_init
 
 
-def hook_init(fm):
-    fm.execute_console("map {key} shell -p lsblk".format(key=LIST_MOUNTS_KEY))
+def hook_init(cli):
+    cli.execute_console("map {key} shell -p lsblk".format(key=LIST_MOUNTS_KEY))
     for disk in "abcdefgh":
-        fm.execute_console("map {key}{0} chain shell pmount sd{1}; cd /media/sd{1}".format(
+        cli.execute_console("map {key}{0} chain shell pmount sd{1}; cd /media/sd{1}".format(
             disk.upper(), disk, key=MOUNT_KEY))
-        fm.execute_console("map {key}{0} chain cd; chain shell pumount sd{1}".format(
+        cli.execute_console("map {key}{0} chain cd; chain shell pumount sd{1}".format(
             disk.upper(), disk, key=UMOUNT_KEY))
         for part in "123456789":
-            fm.execute_console(
+            cli.execute_console(
                 "map {key}{0}{1} chain shell pmount sd{0}{1}; cd /media/sd{0}{1}".format(
                     disk, part, key=MOUNT_KEY)
             )
-            fm.execute_console("map {key}{0}{1} chain cd; shell pumount sd{0}{1}".format(
+            cli.execute_console("map {key}{0}{1} chain cd; shell pumount sd{0}{1}".format(
                 disk, part, key=UMOUNT_KEY))
 
-    return HOOK_INIT_OLD(fm)
+    return HOOK_INIT_OLD(cli)
 
 
 ranger.api.hook_init = hook_init

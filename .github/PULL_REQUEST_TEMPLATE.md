@@ -8,11 +8,11 @@
 
 #### RUNTIME ENVIRONMENT
 <!-- Details of your runtime environment -->
-<!-- Retrieve Python/ranger version and locale with `ranger -\-version` -->
+<!-- Retrieve Python/patrol version and locale with `patrol -\-version` -->
 - Operating system and version: 
 - Terminal emulator and version: 
 - Python version: 
-- Ranger version/commit: 
+- Patrol version/commit: 
 - Locale: 
 
 #### CHECKLIST

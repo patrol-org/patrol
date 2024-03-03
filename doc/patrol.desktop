@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=patrol
+Comment=Launches the patrol data explorer
+Icon=utilities-terminal
+Terminal=true
+Exec=patrol
+Categories=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;
+Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python

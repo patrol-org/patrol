@@ -12,15 +12,15 @@ import ranger.api
 HOOK_INIT_OLD = ranger.api.hook_init
 
 
-def hook_init(fm):
-    HOOK_INIT_OLD(fm)
+def hook_init(cli):
+    HOOK_INIT_OLD(cli)
 
     # Generate key bindings for the chmod command
     command = "map {0}{1}{2} shell -d chmod {1}{0}{2} %s"
     for mode in list('ugoa') + ['']:
         for perm in "rwxXst":
-            fm.execute_console(command.format('-', mode, perm))
-            fm.execute_console(command.format('+', mode, perm))
+            cli.execute_console(command.format('-', mode, perm))
+            cli.execute_console(command.format('+', mode, perm))
 
 
 ranger.api.hook_init = hook_init

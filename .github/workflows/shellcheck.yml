@@ -17,7 +17,7 @@ jobs:
       with:
         filters: |
           scope:
-            - added|modified: 'ranger/data/scope.sh'
+            - added|modified: 'patrol/data/scope.sh'
     - name: Shellcheck scope.sh
       if: ${{ steps.path-filter.outputs.scope == 'true' }}
       run: |
